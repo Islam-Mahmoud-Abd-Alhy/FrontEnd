@@ -48,7 +48,7 @@ A professional, full-stack Dashboard application built to demonstrate core full-
     │   ├── pages/     # Profile, Settings, Lessons, Dashboard
     │   ├── store/     # Redux slices
     │   └── components/# Reusable UI elements
-
+```
 ## 📬 Contact Me
 
 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
