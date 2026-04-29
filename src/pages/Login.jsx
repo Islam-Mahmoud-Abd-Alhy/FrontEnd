@@ -74,7 +74,7 @@ body: JSON.stringify({ email, password })
   <h2 className='text-xl sm:text-2xl text-center text-white mt-5 font-bold'>SYSTEM INITIALIZATION</h2>
   <p className='text-center text-[#ADAAAA] mt-2 font-bold'>IDENTITY VERIFICATION REQUIRED</p>
   <form onSubmit={handleSubmit} className='flex flex-col items-center justify-center mt-6'>
-    <div className='mb-4'>
+    <div className='mb-4 w-full'>
       <label htmlFor='email' className='block text-[#69DAFF] mb-2 font-mono text-sm'>Email</label>
       <input
         type='email'
@@ -85,7 +85,7 @@ body: JSON.stringify({ email, password })
         placeholder=' @  USER_IDENTIFIER@GTA.CORE'
       />
     </div>
-    <div className='mb-4'>
+    <div className='mb-4 w-full'>
       <label htmlFor='password' className='block text-[#69DAFF] mb-2 font-mono text-sm'>ACCESS KEY</label>
       <input
         type='password'
