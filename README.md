@@ -1,4 +1,3 @@
-content = """# MERN Stack Learning Management System (LMS)
 
 A professional, full-stack Dashboard application built to demonstrate core full-stack capabilities, including secure authentication, role-based access control, and responsive design.
 
