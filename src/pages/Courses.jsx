@@ -20,7 +20,7 @@ function Courses() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/courses/create", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/create`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -44,7 +44,7 @@ function Courses() {
   const handleDelete = async (courseId) => {
     if (!window.confirm("Are you sure? This will remove the course for everyone!")) return;
     try {
-      const res = await fetch(`/api/courses/delete/${courseId}`, { method: "DELETE" });
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/delete/${courseId}`, { method: "DELETE" });
       const data = await res.json();
       if (data.success) {
         toast.success(data.message);

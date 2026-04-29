@@ -19,7 +19,7 @@ function Tasks() {
 
   const fetchTasks = useCallback(async () => {
     try {
-      const res = await fetch('/api/auth/me', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
         method: 'GET',
         credentials: 'include'
       });
@@ -43,7 +43,7 @@ function Tasks() {
   const handleAddTask = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/tasks/add-tasks', { 
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/tasks/add-tasks`, { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -84,7 +84,7 @@ function Tasks() {
   const handleDelete = async (taskId) => {
     if (!window.confirm("Abort this mission?")) return;
     try {
-        const res = await fetch(`/api/tasks/delete/${taskId}`, {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/tasks/delete/${taskId}`, {
             method: 'DELETE',
             credentials: 'include'
         });

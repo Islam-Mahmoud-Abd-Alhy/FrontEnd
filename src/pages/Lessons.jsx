@@ -16,7 +16,7 @@ function Lessons() {
 
     try {
       dispatch(setLoading(true)); 
-      const res = await fetch("/api/auth/me", { credentials: "include" });
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, { credentials: "include" });
       const data = await res.json();
       
       if (data.success) {
@@ -37,7 +37,7 @@ const handleJoinCourse = async (e) => {
 
   setIsJoining(true);
   try {
-    const res = await fetch("/api/courses/join", {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/join`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ accessCode: courseCode }),
@@ -64,7 +64,7 @@ const handleLeaveCourse = async (courseId) => {
   if (!window.confirm("Are you sure you want to leave?")) return;
 
   try {
-    const res = await fetch(`/api/courses/leave/${courseId}`, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/courses/leave/${courseId}`, {
       method: "DELETE", 
     });
     const data = await res.json();

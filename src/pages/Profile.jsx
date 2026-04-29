@@ -34,7 +34,7 @@ function Profile() {
       dispatch(setTeacherLoading(true));
 
       try {
-        const res = await fetch("/api/auth/me", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
           credentials: "include",
         });
         const data = await res.json();
@@ -76,7 +76,7 @@ function Profile() {
   const updateProfile = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/auth/account", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/account`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

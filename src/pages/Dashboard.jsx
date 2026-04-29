@@ -34,7 +34,7 @@ function Dashboard() {
       dispatch(setTeacherLoading(true));
       dispatch(setStudentLoading(true));
       try {
-        const res = await fetch("/api/auth/me", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
           credentials: "include",
         });
         const data = await res.json();
@@ -60,7 +60,7 @@ function Dashboard() {
   }, [dispatch, user, navigate]);
   const logout = async () => {
     try {
-      const response = await fetch("/api/auth/logout", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/logout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

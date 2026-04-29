@@ -15,8 +15,8 @@ const handleSubmit = async (e) => {
         toast.error("password must be at least 6 characters")
         return
     }
-    const respones = await fetch('/api/auth/signup', {
-      method: 'POST',
+const respones = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/signup`, {
+        method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },

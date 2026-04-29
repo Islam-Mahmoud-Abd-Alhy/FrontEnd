@@ -1,6 +1,4 @@
 import { useSelector} from 'react-redux'; 
-// import { setLoading as setStudentLoading, setStudent } from '../redux/StudentSlice';
-// import { setLoading as setTeacherLoading, setTeacher } from '../redux/TeacherSlice';
 import { Navigate,Link } from 'react-router-dom';
 
 function Home() {
